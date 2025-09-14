@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
@@ -14,13 +15,14 @@ import Footer from "./components/Footer";
 import BrandShoots from "./pages/BrandShoots";
 import GraphicDesign from "./pages/GraphicDesign";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
-import InstagramMarketing from "./pages/InstagramMarketing";
-import GoogleAds from "./pages/GoogleAds";
+import VideoEditing from "./pages/Videoediting";
+import Ads from "./pages/Ads";
 import SocialMediaManagement from "./pages/SocialMediaManagement";
 
 export default function App() {
   return (
     <div className="w-full">
+      <ScrollToTop />
       <Navbar />
       {/* Push everything down so it's not hidden by fixed navbar */}
       <div className="pt-20">
@@ -51,11 +53,8 @@ export default function App() {
             path="/services/social-media-marketing"
             element={<SocialMediaMarketing />}
           />
-          <Route
-            path="/services/instagram-marketing"
-            element={<InstagramMarketing />}
-          />
-          <Route path="/services/google-ads" element={<GoogleAds />} />
+          <Route path="/services/video-editing" element={<VideoEditing />} />
+          <Route path="/services/ads" element={<Ads />} />
           <Route
             path="/services/social-media-management"
             element={<SocialMediaManagement />}
